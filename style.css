@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #00ff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+.container {
+  position: relative;
+  background: #121212;
+  color: #fff;
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+
+h2, h3 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.password-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.password-box input {
+  flex: 1;
+  padding: 10px;
+  background: #1e1e1e;
+  color: #00ff00;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.password-box button {
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.divider {
+  border-top: 1px dashed #444;
+  margin: 20px 0;
+}
+
+.options label {
+  display: block;
+  margin: 8px 0;
+}
+
+.length-setting {
+  margin-top: 15px;
+}
+
+.length-setting input[type="number"] {
+  width: 50px;
+  margin-left: 10px;
+  text-align: center;
+  background: #1e1e1e;
+  color: #00ff00;
+  border: 1px solid #444;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.length-setting input[type="range"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#generate {
+  width: 100%;
+  padding: 10px;
+  background: #00ff00;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+.footer span {
+  color: #00ff00;
+}
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  width: 50px;
+  height: 26px;
+  background-color: #333;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.slider span {
+  background-color: #0f0;
+  color: #000;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* When checked, move the icon to the right */
+input:checked + .slider span {
+  transform: translateX(24px);
+}
+
+/* Light mode styling */
+body.light-mode {
+  background: #f0f0f0;
+}
+
+body.light-mode .container {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #aaa;
+}
+
+body.light-mode .password-box input {
+  background: #eee;
+  color: #000;
+}
+
+body.light-mode .footer span {
+  color: #007b00;
+}
+
+body.light-mode .slider {
+  background-color: #ccc;
+}
+
+body.light-mode .slider span {
+  background-color: #000;
+  color: #fff;
+}
